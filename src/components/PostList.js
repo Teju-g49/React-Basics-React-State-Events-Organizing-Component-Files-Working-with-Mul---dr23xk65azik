@@ -11,7 +11,7 @@ const PostList = () => {
     const limit = 5;
     useEffect(()=> {
         setIsLoading(true);
-        fetchPosts(page,limit).then(()=>{
+        fetchPosts(page,limit).then((response)=>{
             setIsLoading(false);
             setPost([...response.data])
         })
@@ -22,8 +22,8 @@ const PostList = () => {
     }
     return (
         <>
-        {isLoading&&<h1>Loading...</h1>}
-         {isLoading&&posts.map((item,i)=>{
+        {isLoading && <h1>Loading...</h1>}
+         {isLoading && posts.map((item,i)=>{
             return <Post title={item.title} body={item.body} id={i}/>
                 page: {page}
         })}
