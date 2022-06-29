@@ -1,9 +1,9 @@
 import React from 'react'
-const Post = () => {
+const Post = ({title,body,id}) => {
     return (
         <div className="post" key={id}>
-        <h3></h3>
-        <p></p>
+        <h3>{title}</h3>
+        <p>{body}</p>
         </div>
     )
 }
