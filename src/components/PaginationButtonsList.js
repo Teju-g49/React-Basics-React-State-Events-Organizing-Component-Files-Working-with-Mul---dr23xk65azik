@@ -5,7 +5,7 @@ const PaginationButtonsList = (props) => {
     function createButtons () {
         let buttonArr = [];
         for(let i=0; i<noOfPages; i++) {
-            buttonArr.push(<button id={'button-'+{i+1}} value={i+1} onClick={clickButton}>{i+1}</button>)          /*we are creating button here we can use createElement as well*/
+            buttonArr.push(<button id={'button-'+{i+1}} value={i+1} onClick={clickButtons}>{i+1}</button>)          /*we are creating button here we can use createElement as well*/
         }
         return buttonArr;
     }
