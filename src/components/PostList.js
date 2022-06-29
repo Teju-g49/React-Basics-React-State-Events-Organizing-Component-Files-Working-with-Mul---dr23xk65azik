@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
-import{fetchPosts} from '../api/fetchPosts'
-import{Post} from './Post'
+import {fetchPosts} from '../api/fetchPosts'
+import {Post} from './Post'
+import {PaginationButtonsList} from './PaginationButtonsList'
 
 
 const PostList = () => {
@@ -16,6 +17,7 @@ const PostList = () => {
         <>
         post.map((item,i)=>{
             return <Post title={item.title} body={item.body} id={i}/>
+                <PaginationButtonsList/>
         })
         </>
     )
