@@ -17,7 +17,7 @@ const PaginationButtonsList = (props) => {
         })
         let button = document.getElementById('button-'+event.target.value);
         button.classList.add('active-btn');
-        props.event;
+        props.handleChange(event);
     }
     return (
         <div className="pagination-buttons-list">
