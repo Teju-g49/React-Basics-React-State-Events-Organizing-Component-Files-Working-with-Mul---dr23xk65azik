@@ -12,12 +12,16 @@ const PostList = () => {
         fetchPosts(page,limit).then(()=>{
             setPost([...response.data])
         })
-    },[page])
+    },[page]);
+    
+    function handleChange(event) {
+        setPage(event.target.value);
+    }
     return (
         <>
         post.map((item,i)=>{
             return <Post title={item.title} body={item.body} id={i}/>
-                <PaginationButtonsList/>
+                <PaginationButtonsList handleChange={handleChange}/>
         })
         </>
     )
