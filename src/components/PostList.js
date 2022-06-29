@@ -6,10 +6,13 @@ import {PaginationButtonsList} from './PaginationButtonsList'
 
 const PostList = () => {
     const[page,setPage] = useState(1);
-    const[posts,setPosts] = useState([])
+    const[posts,setPosts] = useState([]);
+    const[isLoading,setIsLoading] = useState(true);
     const limit = 5;
     useEffect(()=> {
+        setIsLoading(true);
         fetchPosts(page,limit).then(()=>{
+            setIsLoading(false);
             setPost([...response.data])
         })
     },[page]);
@@ -19,10 +22,12 @@ const PostList = () => {
     }
     return (
         <>
-        post.map((item,i)=>{
+        {isLoading&&<h1>Loading...</h1>}
+         {isLoading&&posts.map((item,i)=>{
             return <Post title={item.title} body={item.body} id={i}/>
-                <PaginationButtonsList handleChange={handleChange}/>
-        })
+                page: {page}
+        })}
+            <PaginationButtonsList handleChange={handleChange}/>
         </>
     )
 }
