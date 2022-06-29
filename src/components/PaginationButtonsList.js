@@ -1,5 +1,5 @@
 import React from 'react'
-const PaginationButtonsList = () => {
+const PaginationButtonsList = (props) => {
     const noOfPages = 20            /*to calculate pages => (posts/limit) like here 100/5*/
     function createButtons () {
         let buttonArr = [];
