@@ -9,13 +9,13 @@ const PostList = () => {
     const limit = 5;
     useEffect(()=> {
         fetchPosts(page,limit).then(()=>{
-            setPost([...res.data])
+            setPost([...response.data])
         })
     },[page])
     return (
         <>
-        post.map((item,id)=>{
-            return <li>{item.title}</li>
+        post.map((item,i)=>{
+            return <Post title={item.title} body={item.body} id={i}/>
         })
         </>
     )
