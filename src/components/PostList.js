@@ -13,7 +13,9 @@ const PostList = () => {
     },[page])
     return (
         <>
-        post.map(()=>{)
+        post.map((item,id)=>{
+            return <li>{item.title}</li>
+        })
         </>
     )
 }
