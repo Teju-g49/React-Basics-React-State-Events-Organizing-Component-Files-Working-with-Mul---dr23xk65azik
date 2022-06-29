@@ -1,7 +1,7 @@
-import React, {useState,useEffect} from 'react'
-import {fetchPosts} from '../api/fetchPosts'
-import {Post} from './Post'
-import {PaginationButtonsList} from './PaginationButtonsList'
+import React,{useState,useEffect} from 'react'
+import { fetchPosts } from '../api/fetchPosts'
+import {Post} from './Post';
+import { PaginationButtonsList } from './PaginationButtonsList';
 
 
 const PostList = () => {
