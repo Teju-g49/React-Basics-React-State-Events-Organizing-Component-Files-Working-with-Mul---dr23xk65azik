@@ -22,7 +22,7 @@ const PostList = () => {
     }
     return (
         <>
-        {isLoading && <h1>Loading...</h1>}
+        {isLoading && <h1 id="loader">Loading...</h1>}
          {isLoading && posts.map((item,i)=>{
             return <Post title={item.title} body={item.body} id={i}/>
                 page: {page}
